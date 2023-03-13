@@ -71,9 +71,9 @@ export const useConversation = (props: ConversationProps) => {
     setIsProcessing(true)
 
     abortRef.current = new AbortController()
-    const host = IS_LOCAL_SETUP_REQUIRED
-      ? `${settings.host}:${settings.port}`
-      : 'https://sonng-chatgpt.uksouth.cloudapp.azure.com'
+    // const host = IS_LOCAL_SETUP_REQUIRED
+    //   ? `${settings.host}:${settings.port}`
+    const host = 'https://gpt-server-lyart.vercel.app'
     fetch(`${host}/chatgpt/messages`, {
       method: 'POST',
       headers: {
